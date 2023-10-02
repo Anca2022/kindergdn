@@ -1,18 +1,18 @@
-// TO DO - about: aboutS,becone-teacherS popular-teachersS
-// TO DO - social media-DRY
+// TO DO - 
 
-/*
 
-main section   text - heebo, 400, #74787C 
-            button - heebo, 500
-
-*/
 :root {
-    --primary: #FE5D37;
+    --primary: #fe5d37;
     --light: #FFF5F3;
     --dark: #103741;
     --dark-grey: #74787C; 
     --semi-white: rgba(255,255,255,0.5);
+    --green: #198754; 
+    --bg-green:#e1f0e8;
+    --yellow:rgb(255, 193, 7);
+    --bg-yellow:#fff9e4;
+    --bleu: rgb(13, 202, 240);
+    --bg-bleu:#e3f6fc;
 }
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Lobster+Two:wght@700&display=swap');
 //font-family: 'Heebo', sans-serif;
@@ -71,7 +71,6 @@ a{
 .container{
     padding: 0.5rem 2.5rem;
 }
-
 .title {
     font-family: 'Lobster Two', cursive;
     font-weight: 700;
@@ -98,7 +97,18 @@ a{
     }        
     
 }
-
+.thick-border{
+    border: 15px solid var(--light);
+    transition: 0.4s;
+    &:hover{
+        border:15px solid var(--primary);
+        transition: 0.3s;
+    }
+}
+.top-bottom-padding{
+    padding-top:5rem;
+    padding-bottom:5rem;
+}
 .header {
     display: flex; 
     justify-content: space-between;
@@ -206,7 +216,7 @@ a{
         justify-content: center;
     }
     h1{
-        font-size: 4rem;
+        font-size: 4.5rem;
     }
 }
 
@@ -251,12 +261,6 @@ a{
         grid-template-rows: repeat(10, 1fr);
         img{
             border-radius:50%;
-            border:15px solid var(--light);
-            transition: 0.4s;
-            &:hover{
-                border:15px solid var(--primary);
-                transition: 0.3s;
-            }
         }
         .big-pic{
             width:100%;
@@ -297,64 +301,164 @@ a{
     }
 }
 
-.popular-teachers{
+.centered-section{
     text-align: center;
     padding-right:0;
     padding-top:5rem;
     padding-bottom:5rem;
-    .teachers-description {
+    .description {
         width:600px;
         margin-right: auto; 
         margin-left:auto;
-    }
-    .teachers{
-        padding-top:1rem;
-        display:flex;
-        justify-content: space-between;
-        .teacher{
-            display:grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            
-            img{
-                grid-column: 1/3;
-                grid-row:1/10;
-                height:32rem;
-                border-radius:50%;
-            }
-            .teacher-info{
-                background-color: white;
-                grid-column:3/4;
-                grid-row:7/10;
-                border: 15px solid var(--light);
-                width:15rem;
-                height:15rem;
-                display: flex;
-                flex-direction: column;
-                align-items:  center;
-                justify-content: center;
-                border-radius:50%;
-                &:hover{
-                    border: 15px solid var(--primary);
-                }
-                .teacher-name{
-                    color:var(--dark); 
-                    font-size:1.8rem;
-                    margin-bottom:0;
-                }
-                //.designation {}
+    }             
+}
 
-                .social-media{
-                    a{
-                        background-color: var(--primary);
-                        &:hover{
-                            background-color:#fc6e4e;
-                            color:white;
-                        }
+.teachers{
+    padding-top:1rem;
+    display:flex;
+    justify-content: space-between;
+    .teacher{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        img{
+            grid-column: 1/3;
+            grid-row:1/10;
+            height:32rem;
+            border-radius:50%;
+        }
+        .teacher-info{
+            background-color: white;
+            grid-column:3/4;
+            grid-row:7/10;
+            width:15rem;
+            height:15rem;
+            display: flex;
+            flex-direction: column;
+            align-items:  center;
+            justify-content: center;
+            border-radius:50%;
+            .teacher-name{
+                color:var(--dark); 
+                font-size:1.8rem;
+                margin-bottom:0;
+            }
+            //.designation {}
+            .social-media{
+                a{
+                    background-color: var(--primary);
+                    &:hover{
+                        background-color:#fc6e4e;
+                        color:white;
                     }
                 }
+            }
 
+        }
+    }
+}
+ 
+.facilities{
+    display: flex;
+    justify-content: space-between;
+    gap:1.5rem;
+    padding-right:2rem;
+    padding-top:2rem;
+    .facility{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover{
+            i, p, .title{
+                color:white;
             }
         }
+        .icon{
+            height:6rem;
+            width:6rem;
+            border-radius:50%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                font-size:2.8rem;
+                margin:0.5rem;
+            }
+            &::before, &::after{
+                content:'';
+                align-self: flex-start; 
+                width:1rem;
+                height:2rem;
+                border-radius:50%;
+            }
+        }
+        .facility-text{ 
+            border-radius:50%;
+            height:16rem;
+            .title{
+                font-size:1.8rem;
+            }
+            padding:3rem 2.5rem;
+        }
+    }
+    .first{
+        .icon, .facility-text, .icon::before, .icon::after{
+            background-color: var(--light);  
+            transition: 0.5s;
+        } 
+        .title, i{
+            color:var(--primary);
+        }
+        &:hover{
+            .icon, .facility-text, .icon::before, .icon::after{
+                background-color: var(--primary);
+                transition:0.5s;
+            } 
+        }     
+    }
+    .second{
+        .icon, .facility-text, .icon::before, .icon::after{
+            background-color: var(--bg-green); 
+            transition: 0.5s; 
+        } 
+        .title, i{
+            color:var(--green);
+        }
+        &:hover{
+            .icon, .facility-text, .icon::before, .icon::after{
+                background-color: var(--green);
+                transition: 0.5s;
+            } 
+        }     
+    }
+    .third{
+        .icon, .facility-text, .icon::before, .icon::after{
+            background-color: var(--bg-yellow); 
+            transition: 0.5s; 
+        } 
+        .title, i{
+            color:var(--yellow);
+        }
+        &:hover{
+            .icon, .facility-text, .icon::before, .icon::after{
+                background-color: var(--yellow);
+                transition: 0.5s;
+            } 
+        }     
+    }
+    .fourth{
+        .icon, .facility-text, .icon::before, .icon::after{
+            background-color: var(--bg-bleu);
+            transition: 0.5s;  
+        } 
+        .title, i{
+            color:var(--bleu);
+        }
+        &:hover{
+            .icon, .facility-text, .icon::before, .icon::after{
+                background-color: var(--bleu);
+                transition: 0.5s;
+            } 
+        }     
     }
 }
 footer{
@@ -480,7 +584,6 @@ footer{
         }
     }
 }
-
 
 .go-to-top{
     position:fixed; 

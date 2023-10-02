@@ -1,16 +1,16 @@
-/*
-
-main section   text - heebo, 400, #74787C 
-            button - heebo, 500
-
-*/
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Lobster+Two:wght@700&display=swap");
 :root {
-  --primary: #FE5D37;
+  --primary: #fe5d37;
   --light: #FFF5F3;
   --dark: #103741;
   --dark-grey: #74787C;
   --semi-white: rgba(255,255,255,0.5);
+  --green: #198754;
+  --bg-green:#e1f0e8;
+  --yellow:rgb(255, 193, 7);
+  --bg-yellow:#fff9e4;
+  --bleu: rgb(13, 202, 240);
+  --bg-bleu:#e3f6fc;
 }
 
 *, *::after, *::before {
@@ -99,6 +99,20 @@ a:hover {
 }
 .social-media a:hover {
   background-color: var(--primary);
+}
+
+.thick-border {
+  border: 15px solid var(--light);
+  transition: 0.4s;
+}
+.thick-border:hover {
+  border: 15px solid var(--primary);
+  transition: 0.3s;
+}
+
+.top-bottom-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .header {
@@ -212,7 +226,7 @@ a:hover {
   justify-content: center;
 }
 .hero-section h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 
 .about-section {
@@ -258,12 +272,6 @@ a:hover {
 }
 .about-section .right-side img {
   border-radius: 50%;
-  border: 15px solid var(--light);
-  transition: 0.4s;
-}
-.about-section .right-side img:hover {
-  border: 15px solid var(--primary);
-  transition: 0.3s;
 }
 .about-section .right-side .big-pic {
   width: 100%;
@@ -303,37 +311,37 @@ a:hover {
   width: 100%;
 }
 
-.popular-teachers {
+.centered-section {
   text-align: center;
   padding-right: 0;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.popular-teachers .teachers-description {
+.centered-section .description {
   width: 600px;
   margin-right: auto;
   margin-left: auto;
 }
-.popular-teachers .teachers {
+
+.teachers {
   padding-top: 1rem;
   display: flex;
   justify-content: space-between;
 }
-.popular-teachers .teachers .teacher {
+.teachers .teacher {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.popular-teachers .teachers .teacher img {
+.teachers .teacher img {
   grid-column: 1/3;
   grid-row: 1/10;
   height: 32rem;
   border-radius: 50%;
 }
-.popular-teachers .teachers .teacher .teacher-info {
+.teachers .teacher .teacher-info {
   background-color: white;
   grid-column: 3/4;
   grid-row: 7/10;
-  border: 15px solid var(--light);
   width: 15rem;
   height: 15rem;
   display: flex;
@@ -342,20 +350,104 @@ a:hover {
   justify-content: center;
   border-radius: 50%;
 }
-.popular-teachers .teachers .teacher .teacher-info:hover {
-  border: 15px solid var(--primary);
-}
-.popular-teachers .teachers .teacher .teacher-info .teacher-name {
+.teachers .teacher .teacher-info .teacher-name {
   color: var(--dark);
   font-size: 1.8rem;
   margin-bottom: 0;
 }
-.popular-teachers .teachers .teacher .teacher-info .social-media a {
+.teachers .teacher .teacher-info .social-media a {
   background-color: var(--primary);
 }
-.popular-teachers .teachers .teacher .teacher-info .social-media a:hover {
+.teachers .teacher .teacher-info .social-media a:hover {
   background-color: #fc6e4e;
   color: white;
+}
+
+.facilities {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+.facilities .facility {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.facilities .facility:hover i, .facilities .facility:hover p, .facilities .facility:hover .title {
+  color: white;
+}
+.facilities .facility .icon {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facilities .facility .icon i {
+  font-size: 2.8rem;
+  margin: 0.5rem;
+}
+.facilities .facility .icon::before, .facilities .facility .icon::after {
+  content: "";
+  align-self: flex-start;
+  width: 1rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.facilities .facility .facility-text {
+  border-radius: 50%;
+  height: 16rem;
+  padding: 3rem 2.5rem;
+}
+.facilities .facility .facility-text .title {
+  font-size: 1.8rem;
+}
+.facilities .first .icon, .facilities .first .facility-text, .facilities .first .icon::before, .facilities .first .icon::after {
+  background-color: var(--light);
+  transition: 0.5s;
+}
+.facilities .first .title, .facilities .first i {
+  color: var(--primary);
+}
+.facilities .first:hover .icon, .facilities .first:hover .facility-text, .facilities .first:hover .icon::before, .facilities .first:hover .icon::after {
+  background-color: var(--primary);
+  transition: 0.5s;
+}
+.facilities .second .icon, .facilities .second .facility-text, .facilities .second .icon::before, .facilities .second .icon::after {
+  background-color: var(--bg-green);
+  transition: 0.5s;
+}
+.facilities .second .title, .facilities .second i {
+  color: var(--green);
+}
+.facilities .second:hover .icon, .facilities .second:hover .facility-text, .facilities .second:hover .icon::before, .facilities .second:hover .icon::after {
+  background-color: var(--green);
+  transition: 0.5s;
+}
+.facilities .third .icon, .facilities .third .facility-text, .facilities .third .icon::before, .facilities .third .icon::after {
+  background-color: var(--bg-yellow);
+  transition: 0.5s;
+}
+.facilities .third .title, .facilities .third i {
+  color: var(--yellow);
+}
+.facilities .third:hover .icon, .facilities .third:hover .facility-text, .facilities .third:hover .icon::before, .facilities .third:hover .icon::after {
+  background-color: var(--yellow);
+  transition: 0.5s;
+}
+.facilities .fourth .icon, .facilities .fourth .facility-text, .facilities .fourth .icon::before, .facilities .fourth .icon::after {
+  background-color: var(--bg-bleu);
+  transition: 0.5s;
+}
+.facilities .fourth .title, .facilities .fourth i {
+  color: var(--bleu);
+}
+.facilities .fourth:hover .icon, .facilities .fourth:hover .facility-text, .facilities .fourth:hover .icon::before, .facilities .fourth:hover .icon::after {
+  background-color: var(--bleu);
+  transition: 0.5s;
 }
 
 footer {
