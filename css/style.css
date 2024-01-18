@@ -313,7 +313,6 @@ a:hover {
 
 .centered-section {
   text-align: center;
-  padding-right: 0;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -367,7 +366,6 @@ a:hover {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
-  padding-right: 2rem;
   padding-top: 2rem;
 }
 .facilities .facility {
@@ -448,6 +446,62 @@ a:hover {
 .facilities .fourth:hover .icon, .facilities .fourth:hover .facility-text, .facilities .fourth:hover .icon::before, .facilities .fourth:hover .icon::after {
   background-color: var(--bleu);
   transition: 0.5s;
+}
+
+.carousel {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 49%;
+  gap: 2%;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.carousel i.arrows:hover {
+  background-color: var(--dark);
+  transition: 0.4s;
+}
+.carousel .carousel-item {
+  background-color: var(--light);
+  border-radius: 10px;
+  padding: 2.4rem;
+  text-align: left;
+}
+.carousel .carousel-item p {
+  font-size: 1.25rem;
+}
+.carousel .carousel-item .client {
+  background-color: white;
+  margin-right: -45px;
+  margin-left: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.carousel .carousel-item .client .client-text {
+  flex-basis: 70%;
+}
+.carousel .carousel-item .client .client-text img {
+  float: left;
+  border-radius: 50%;
+  width: 90px;
+  margin-left: -45px;
+  margin-right: 20px;
+}
+.carousel .carousel-item .client .client-text h3 {
+  font-size: 1.8rem;
+  color: var(--dark);
+  padding-top: 10px;
+}
+.carousel .carousel-item .client .client-text p {
+  font-size: 1rem;
+}
+.carousel .carousel-item .client i {
+  font-size: 4rem;
+  color: var(--primary);
+  padding-right: 10px;
 }
 
 footer {
@@ -573,16 +627,20 @@ footer .lower-footer ul li:last-child {
   padding-right: 0;
 }
 
-.go-to-top {
-  position: fixed;
-  bottom: 50px;
-  right: 30px;
+.arrows {
   background-color: var(--primary);
+  transition: background-color 0.4s;
   color: white;
   height: 45px;
   width: 45px;
   border-radius: 50%;
   text-align: center;
   font-size: 1.5rem;
-  padding-top: 0.8rem;
+  padding-top: 0.7rem;
+}
+
+.go-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
 }/*# sourceMappingURL=style.css.map */
