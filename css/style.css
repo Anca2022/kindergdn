@@ -136,7 +136,7 @@ a:hover {
   justify-content: space-evenly;
   color: var(--dark);
   font-weight: 500;
-  width: 450px;
+  width: 520px;
 }
 .header nav .main-nav .current {
   color: var(--primary);
@@ -227,6 +227,9 @@ a:hover {
 }
 .hero-section h1 {
   font-size: 4.5rem;
+}
+.hero-section p {
+  color: white;
 }
 
 .about-section {
@@ -325,11 +328,15 @@ a:hover {
 .teachers {
   padding-top: 1rem;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .teachers .teacher {
+  width: 390px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 2rem;
 }
 .teachers .teacher img {
   grid-column: 1/3;
@@ -504,6 +511,95 @@ a:hover {
   padding-right: 10px;
 }
 
+.contact ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 3.5rem;
+}
+.contact ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+}
+.contact ul li i {
+  background-color: var(--light);
+  color: var(--primary);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-box {
+  background-color: var(--light);
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  margin-bottom: 4rem;
+  overflow: hidden;
+}
+.contact-box div {
+  flex-basis: 50%;
+}
+.contact-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contact-box div.contact-text {
+  padding: 3rem 2rem;
+}
+.contact-box div.contact-text input, .contact-box div.contact-text textarea {
+  border: none;
+  outline: none;
+  padding: 1rem 0.5rem;
+  margin-bottom: 0.7rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  border: 3px solid transparent;
+  transition: 0.4s;
+}
+.contact-box div.contact-text input:focus, .contact-box div.contact-text textarea:focus {
+  position: relative;
+  border: 3px solid rgba(254, 93, 55, 0.4);
+}
+.contact-box div.contact-text .half {
+  width: 49%;
+}
+.contact-box div.contact-text button {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.not-found svg {
+  color: var(--primary);
+  width: 90px;
+}
+.not-found h2 {
+  font-size: 5rem;
+  padding-bottom: 0;
+}
+.not-found h3 {
+  color: var(--dark);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.not-found button {
+  padding: 0.5rem 3rem;
+  border-radius: 3rem;
+}
+.not-found button a {
+  color: white;
+}
+
 footer {
   background-color: var(--dark);
   color: var(--semi-white);
@@ -643,4 +739,8 @@ footer .lower-footer ul li:last-child {
   position: fixed;
   bottom: 50px;
   right: 30px;
+  background-color: #fc6e4e;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
