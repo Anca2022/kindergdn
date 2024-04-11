@@ -1,5 +1,5 @@
 # Kindergarten Website
-Welcome to the Kindergarten Website repository! This project serves as a hands-on learning experience for practicing CSS skills by creating a website for a fictional kindergarten. The design is based on a free CSS template, providing a starting point for exploration and enhancement.
+Welcome to the Kindergarten Website repository! This project serves as a hands-on learning experience for practicing CSS skills by creating a website for a fictional kindergarten. The design is based on a free CSS template, providing a starting point for exploration and enhancement. The project focuses on style and does not take into account the webpage's responsiveness.
 
 ## Features
 <b>CSS Practice</b>: The primary goal of this project is to practice and improve CSS skills.
