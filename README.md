@@ -4,7 +4,6 @@ Welcome to the Kindergarten Website repository! This project serves as a hands-o
 ## Features
 <b>CSS Practice</b>: The primary goal of this project is to practice and improve CSS skills.
 <b>Kindergarten Theme</b>: The website is themed around a kindergarten, with elements and content tailored to suit the context.
-<b>Responsive Design</b>: The layout is designed to be responsive, ensuring a consistent experience across different devices.
 
 ## Preview
 ![image](https://github.com/Anca2022/kindergdn/assets/98110730/a101d89c-bf2c-408c-93de-4fb572aa015a)
